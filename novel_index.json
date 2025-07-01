@@ -9,7 +9,7 @@
   "dateFormatLocale": "",
   "isNsfw": false,
   "hasCloudflare": false,
-  "sourceCodeUrl": "https://raw.githubusercontent.com/kodjodevf/mangayomi-extensions/main/javascript/novel/en.libgen.js",
+  "sourceCodeUrl": "https://github.com/arlakh/myext/blob/main/javascript/novel/en.libgen.js",
   "apiUrl": "",
   "version": "1.0.0",
   "isManga": false,
