@@ -9,7 +9,7 @@ class DefaultExtension extends MProvider {
   mangaListFromPage(doc) {
     const list = [];
     const rows = doc.select("table.c > tbody > tr");
-
+b
     for (let i = 1; i < rows.length; i++) {
       const cols = rows[i].select("td");
       const name = cols[2]?.text.trim() ?? "Untitled";
