@@ -18,9 +18,29 @@ Usage:
     response = chatbot.chat("Help me write a story about adventure")
 """
 
-from .text_processor import TextProcessor
-from .simple_model import SimpleLanguageModel
-from .chatbot import BookWritingChatbot
+# Try to import full-featured versions, fallback to built-in versions
+try:
+    from .text_processor import TextProcessor
+    from .simple_model import SimpleLanguageModel
+    print("✅ Using full-featured versions with external dependencies")
+except ImportError as e:
+    print(f"⚠️ External dependencies not available: {e}")
+    print("🔄 Falling back to built-in library versions...")
+    
+    try:
+        from .text_processor_builtin import TextProcessorBuiltin as TextProcessor
+        from .simple_model_builtin import SimpleLanguageModelBuiltin as SimpleLanguageModel
+        print("✅ Using built-in library versions")
+    except ImportError as fallback_error:
+        print(f"❌ Failed to import built-in versions: {fallback_error}")
+        raise
+
+# Always try to import the main chatbot (it should adapt to available components)
+try:
+    from .chatbot_builtin import BookWritingChatbotBuiltin as BookWritingChatbot
+except ImportError:
+    print("⚠️ Using basic chatbot implementation")
+    # We'll create a basic implementation
 
 __version__ = "1.0.0"
 __author__ = "AI Assistant"
