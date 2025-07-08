@@ -1,0 +1,11 @@
+# Essential packages for basic functionality
+flask>=2.3.0
+flask-cors>=4.0.0
+
+# Optional packages for full functionality (install if available)
+# torch>=2.0.0
+# transformers>=4.30.0
+# numpy>=1.24.0
+# pandas>=2.0.0
+# scikit-learn>=1.3.0
+# nltk>=3.8.0
